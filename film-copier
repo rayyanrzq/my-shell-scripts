@@ -1,0 +1,42 @@
+#!/bin/bash
+#
+#  film-copier - script to copy the latest film on /home/rayyan/Videos to
+#  Samsung External Harddrive
+#
+#  script template:
+#  https://ubuntu.com/server/docs/how-to-back-up-using-shell-scripts
+#
+#  Modified by Rayyan Razaq 2024
+#
+
+
+# What to copy
+copy_files="/home/rayyan/Videos/*" 
+
+# Where to copy
+dest="/media/rayyan/78EC3A9BEC3A541A/Film"
+
+# Print start status copy
+echo "Start copy $copy_files to $dest"
+date
+echo
+
+# Copy commands with rsync
+sudo rsync --archive --verbose --progress --ignore-existing --exclude 'Camera/' $copy_files $dest
+
+# Print end status copy
+echo
+echo "$copy_files copied to $dest"
+echo
+
+#
+#
+# things to improve
+# 1. end status copy
+#    list the files that copied to dest
+# 2. add progress bar at the bottom 
+#
+#
+#
+#
+#

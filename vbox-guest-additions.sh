@@ -18,6 +18,5 @@ echo
 sudo /cdrom/VBoxLinuxAdditions.run
 
 echo
-echo '***Unmount /cdrom'
+echo '***Finished'
 echo
-umount /cdrom

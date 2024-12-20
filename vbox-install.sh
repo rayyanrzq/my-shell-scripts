@@ -26,7 +26,9 @@ echo 'Add user to vbousers group'
 echo
 sudo usermod -aG vboxusers $USER
 
-
+echo
+echo 'Better to reboot your pc'
+echo
 
 
 

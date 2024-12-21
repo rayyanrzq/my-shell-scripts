@@ -5,8 +5,8 @@
 #
 
 # Directory path
-origin="/home/rayyan/Videos/" 
-dest="/media/rayyan/78EC3A9BEC3A541A/Film"
+origin="/home/$USER/Videos/" 
+dest="/media/$USER/78EC3A9BEC3A541A/Film"
 
 # Copy with rsync
-sudo rsync --archive --verbose --progress --ignore-existing --exclude 'Webcam/' $origin $dest
+sudo rsync --archive --verbose --progress --ignore-existing --exclude={'Webcam/','Camera/'} $origin $dest
